@@ -1,4 +1,4 @@
-Open image
+PicDownloads
 =========
 
-Extension for Google Chrome that open images in new tabs
+Extension for Google Chrome that downloads images.
