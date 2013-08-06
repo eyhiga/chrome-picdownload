@@ -47,7 +47,7 @@ function _anchorDownloader(url, filename) {
     }
 
     chrome.contextMenus.create({
-            "title"		:   "Open image",
+            "title"		:   "Download image",
             "contexts"	:   ["image"],
             "onclick"	:	handleSelectedArea
             });
