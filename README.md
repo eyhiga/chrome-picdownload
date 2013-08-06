@@ -1,4 +1,4 @@
-extension
+Open image
 =========
 
-extension
+Extension for Google Chrome that open images in new tabs
