@@ -35,13 +35,6 @@ function handleSelectedArea(info, tab) {
         chrome.tabs.create( { 
             'url' : _anchorDownloader( url, filename ), 
             'active' : false  } );
-        /*
-        var newTab = chrome.tabs.create({
-                "openerTabId" 	:	tab.id,
-                "url" 			: 	url,
-                "active"		: 	false
-                });
-        */
     }
 }
 
