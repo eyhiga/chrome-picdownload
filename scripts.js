@@ -1,11 +1,10 @@
 function handleSelectedArea(info, tab) {
     var url = getURL(info);
-    var selection = document.getSelection();
-    var html = selection.toString();
     var filename = url.substring(url.lastIndexOf('/')+1);
 
     if (chrome.downloads) {
-        chrome.downloads.download({ url: url, filename: filename, saveAs: true });
+        chrome.downloads.download({ url: url, 
+                filename: filename, saveAs: true });
     } else {
         var newTab = chrome.tabs.create({
                 "openerTabId" 	:	tab.id,
@@ -23,7 +22,7 @@ function getURL(info) {
 }
 
 chrome.contextMenus.create({
-    "title"		:   "Open image",
-    "contexts"	:   ["image"],
-    "onclick"	:	handleSelectedArea
-});
+        "title"		:   "Open image",
+        "contexts"	:   ["image"],
+        "onclick"	:	handleSelectedArea
+        });
