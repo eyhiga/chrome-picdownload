@@ -1,18 +1,24 @@
 function _anchorDownloader(url, filename) {
     var timeout = 500;
-    return 'javascript:\'<!doctype html><html>'+
-        '<head></head>' +
-        '<script>' +
-        'function initDownload() {'+
-            'var el = document.getElementById("anchor");'+
-                'el.click();' +
-                'setTimeout(function() { window.close(); }, ' + timeout + ');' +
+    return 'javascript:\'' + 
+        '<!doctype html>' + 
+        '<html>'+
+            '<head></head>' +
+            '<script>' +
+                'function initDownload() {'+
+                    'var el = document.getElementById("anchor");'+
+                    'el.click();' +
+                    'setTimeout(function() { ' + 
+                        'window.close(); ' + 
+                    '}, ' + timeout + ');' +
                 '}'+
-                '</script>' +
-                '<body onload="initDownload()">' +
-                '<a id="anchor" href="' + url + '" download="'+ filename + '"></a>'+
-                '</body>' +
-                '</html>\'';
+            '</script>' +
+            '<body onload="initDownload()">' +
+                '<a id="anchor" href="' + url + '" ' + 
+                    'download="'+ filename + '">' + 
+                '</a>'+
+            '</body>' +
+        '</html>\'';
         };
 
     function handleSelectedArea(info, tab) {
