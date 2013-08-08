@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "PicDownload",
-  "description": "This extension downloads images from a selected area.",
+  "description": "This extension downloads images.",
   "version": "1.0",
   "permissions": ["tabs","contextMenus"],
   "background": {
